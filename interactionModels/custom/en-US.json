@@ -1,0 +1,114 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "hey cookie",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "NumberGuessIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{number}",
+            "is it {number}",
+            "how about {number}",
+            "could be {number}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "MorningInit",
+          "slots": [],
+          "samples": [
+            "Goodmorning"
+          ]
+        },
+        {
+          "name": "MorningSleepResponse",
+          "slots": [
+            {
+              "name": "sleep_quality",
+              "type": "condition_quality"
+            }
+          ],
+          "samples": [
+            "I slept {sleep_quality} "
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "0",
+              "name": {
+                "value": "alright"
+              }
+            },
+            {
+              "id": "-2",
+              "name": {
+                "value": "really bad"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "really good"
+              }
+            },
+            {
+              "id": "-1",
+              "name": {
+                "value": "bad"
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "good"
+              }
+            }
+          ],
+          "name": "condition_quality"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "2"
+}
